@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#100d13">
+<title>Shree — An Untold Story</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=DM+Sans:wght@300;400;500;600&family=Great+Vibes&display=swap');
+:root{--bg:#100d13;--panel:#19131c;--wine:#6f263d;--rose:#d99aaa;--gold:#d8bd91;--cream:#f2e9df;--muted:#b7a8b1;--line:#ffffff18}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--cream);font-family:'DM Sans',sans-serif;overflow-x:hidden}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;z-index:-2;background:radial-gradient(ellipse at 15% 10%,#56253a55,transparent 40%),radial-gradient(ellipse at 90% 65%,#24304a44,transparent 38%),linear-gradient(145deg,#100d13,#17121a 55%,#0c1019)}
+a{color:inherit}.grain{position:fixed;inset:0;pointer-events:none;opacity:.08;z-index:10;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.4'/%3E%3C/svg%3E")}
+#particles{position:fixed;inset:0;pointer-events:none;z-index:-1;overflow:hidden}.particle{position:absolute;color:#e5a9b9;opacity:0;animation:floatUp linear infinite;text-shadow:0 0 14px #e5a9b9}
+@keyframes floatUp{0%{transform:translateY(110vh) rotate(0);opacity:0}12%{opacity:.55}85%{opacity:.35}100%{transform:translateY(-15vh) rotate(220deg);opacity:0}}
+nav{position:fixed;top:0;left:0;right:0;z-index:20;display:flex;justify-content:space-between;align-items:center;padding:18px clamp(18px,5vw,70px);background:linear-gradient(#100d13dd,transparent);backdrop-filter:blur(8px)}
+.brand{font-family:'Great Vibes',cursive;font-size:29px;color:var(--rose);text-decoration:none}.navlinks{display:flex;gap:22px}.navlinks a{text-decoration:none;color:#d7c8d0;font-size:11px;letter-spacing:1.5px;text-transform:uppercase}.navlinks a:hover{color:var(--gold)}
+section{padding:100px 7vw;position:relative}.hero{min-height:100svh;display:grid;place-items:center;text-align:center;padding-top:130px;overflow:hidden}
+.moon{position:absolute;width:min(58vw,440px);aspect-ratio:1;border-radius:50%;right:8%;top:14%;background:radial-gradient(circle at 35% 30%,#fff7e9,#d9c5c2 34%,#9a7888 62%,#312a3d 74%,transparent 75%);opacity:.13;filter:blur(1px);box-shadow:0 0 110px #d9a9bd22}
+.hero-inner{max-width:850px;position:relative}.eyebrow{font-size:10px;letter-spacing:4px;text-transform:uppercase;color:var(--gold)}h1{font:500 clamp(66px,13vw,150px)/.9 'Cormorant Garamond',serif;margin:24px 0;color:var(--cream)}h1 em{color:var(--rose);font-weight:400}.hero p{font:italic clamp(19px,3vw,27px)/1.5 'Cormorant Garamond',serif;color:#d8c7d0;max-width:650px;margin:25px auto}.smallnote{font-size:11px;color:#a99ba5;letter-spacing:1px}.scroll{margin-top:60px;color:var(--gold);font-size:10px;letter-spacing:3px;text-transform:uppercase}
+.btn{display:inline-block;border:1px solid #d99aaa77;color:var(--cream);background:#6f263d33;padding:13px 22px;border-radius:99px;text-decoration:none;font-size:11px;letter-spacing:1.5px;text-transform:uppercase;cursor:pointer;transition:.3s}.btn:hover{background:#8c3a55;color:white;transform:translateY(-2px);box-shadow:0 10px 35px #8c3a5544}
+.section-head{text-align:center;max-width:700px;margin:0 auto 55px}.section-head .kicker{color:var(--gold);letter-spacing:3px;text-transform:uppercase;font-size:10px}.section-head h2{font:500 clamp(38px,6vw,68px)/1.05 'Cormorant Garamond',serif;margin:15px 0}.section-head p{color:var(--muted);font:italic 18px/1.6 'Cormorant Garamond',serif}
+.story{max-width:1000px;margin:auto;display:grid;grid-template-columns:1fr 1fr;gap:18px}.story-card{background:linear-gradient(135deg,#ffffff0b,#ffffff03);border:1px solid var(--line);padding:30px;border-radius:4px;min-height:205px;position:relative;overflow:hidden}.story-card:after{content:"✦";position:absolute;right:20px;bottom:0;font-size:72px;color:#d99aaa12}.story-card .num{font-size:10px;letter-spacing:2px;color:var(--gold)}.story-card h3{font:500 30px 'Cormorant Garamond',serif;margin:14px 0}.story-card p{color:#c4b5bd;line-height:1.8;font-size:13px;max-width:420px}
+.quote-wrap{max-width:860px;margin:auto}.poem{background:linear-gradient(135deg,#241722dd,#17131b);border:1px solid #d99aaa33;padding:clamp(24px,5vw,48px);margin:18px 0;border-radius:3px;box-shadow:0 18px 55px #0003;position:relative}.poem:before{content:"“";position:absolute;top:-20px;left:18px;font:100px 'Cormorant Garamond',serif;color:#d99aaa22}.poem h3{font:italic 27px 'Cormorant Garamond',serif;color:var(--gold);margin:0 0 18px}.poem p{font:italic clamp(17px,2vw,21px)/1.85 'Cormorant Garamond',serif;white-space:pre-line;margin:0;color:#eee1e5}.poem .translation{font:12px 'DM Sans',sans-serif;color:#a995a0;margin-top:18px}
+.poem details{margin-top:18px}.poem summary{cursor:pointer;color:var(--rose);font-size:10px;letter-spacing:2px;text-transform:uppercase}
+.philosophy{background:linear-gradient(110deg,#1c1720,#10151e);text-align:center}.question{font:italic clamp(28px,5vw,52px)/1.3 'Cormorant Garamond',serif;max-width:850px;margin:25px auto;color:#e7d9df}.answer{color:var(--muted);font-size:12px;letter-spacing:1px}
+.memories{display:flex;flex-wrap:wrap;justify-content:center;gap:12px;max-width:700px;margin:35px auto}.memory{border:1px solid #d99aaa44;padding:12px 18px;border-radius:99px;color:#e8cbd4;font:italic 19px 'Cormorant Garamond',serif;background:#ffffff06}
+.music-box{max-width:900px;margin:auto;background:#17131b;border:1px solid var(--line);padding:clamp(18px,4vw,35px);display:grid;grid-template-columns:1fr 1.2fr;gap:28px;align-items:center}.music-copy h3{font:500 34px 'Cormorant Garamond',serif;margin:0 0 10px}.music-copy p{color:var(--muted);font-size:13px;line-height:1.7}.track-list{display:grid;gap:8px}.track{display:flex;align-items:center;gap:12px;padding:11px 13px;border:1px solid #ffffff12;background:#ffffff05;cursor:pointer;text-align:left;color:var(--cream);width:100%;transition:.2s}.track:hover,.track.active{border-color:#d99aaa88;background:#6f263d33}.track .play{color:var(--rose);font-size:17px}.track span:last-child{font-size:12px;color:#cdbec7}.player{max-width:900px;margin:14px auto 0;background:#100d13;border:1px solid var(--line);padding:14px}.player iframe{width:100%;aspect-ratio:16/9;border:0;display:block}.player-note{font-size:10px;color:#9d8d98;margin:10px 0 0}
+.secret{max-width:760px;margin:auto;text-align:center;background:linear-gradient(145deg,#211722,#12131c);border:1px solid #d99aaa55;padding:clamp(25px,6vw,60px)}.lock{font-size:36px;color:var(--gold)}.secret h2{font:500 clamp(36px,6vw,60px) 'Cormorant Garamond',serif}.secret p{color:var(--muted);font:italic 18px/1.6 'Cormorant Garamond',serif}.secret input{background:#0e0b11;border:1px solid #d99aaa66;color:white;padding:14px 16px;text-align:center;letter-spacing:5px;text-transform:uppercase;width:min(250px,80%);outline:none;margin:12px}.reveal{display:none;margin:30px auto 0;max-width:520px;padding:25px;border-top:1px solid #d99aaa66;color:#f0dce3;font:italic 25px/1.5 'Cormorant Garamond',serif}.reveal.show{display:block;animation:fade .8s ease}.error{height:18px;color:#e6a2b3;font-size:11px}
+@keyframes fade{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
+footer{text-align:center;padding:60px 20px 80px;color:#8e808b;font-size:11px;letter-spacing:1px}footer .signature{font:italic 28px 'Cormorant Garamond',serif;color:var(--rose);margin:15px}
+@media(max-width:700px){.navlinks{gap:11px}.navlinks a{font-size:9px;letter-spacing:.7px}.brand{font-size:24px}.story{grid-template-columns:1fr}.music-box{grid-template-columns:1fr}.hero{min-height:92svh}section{padding:80px 6vw}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+<div class="grain"></div><div id="particles"></div>
+<nav><a class="brand" href="#home">Unkahi ek Kahaani</a><div class="navlinks"><a href="#story">Story</a><a href="#shayari">Shayari</a><a href="#music">Music</a><a href="#secret">Secret</a></div></nav>
+<header class="hero" id="home"><div class="moon"></div><div class="hero-inner">
+<div class="eyebrow">A story written between silence and stars</div>
+<h1>For <em>Shree</em></h1>
+<p>“Kuch log zindagi mein kahaani bankar nahi aate…<br>bas ek ehsaas bankar thehar jaate hain.”</p>
+<div class="smallnote">A little universe of words, memories & unsaid feelings</div>
+<div style="margin-top:30px"><a class="btn" href="#story">Enter the story</a></div><div class="scroll">Scroll slowly · feel quietly ↓</div>
+</div></header>
+<section id="story"><div class="section-head"><div class="kicker">Chapter I · The beginning</div><h2>Somewhere, without a plan</h2><p>Yeh kahaani kisi vaade se shuru nahi hui. Shayad ek aam si baat thi, ek chhoti si muskurahat… aur phir kuch lamhe khaas lagne lage.</p></div>
+<div class="story"><article class="story-card"><div class="num">01 / A THOUGHT</div><h3>Ek ajeeb si baat</h3><p>Kabhi-kabhi kisi se baat karna din ka sabse halka, sabse khoobsurat hissa ban jaata hai. Aur insaan ko pata bhi nahi chalta ki woh kab un lamhon ka intezaar karne laga.</p></article>
+<article class="story-card"><div class="num">02 / THE PHILOSOPHY</div><h3>Sawaalon ki teacher</h3><p>Aap philosophy padhati hain. Shayad aap jaanti hongi: har sawaal ka jawaab zaroori nahi hota. Kuch ehsaas bas samajhne ke liye hote hain, paane ke liye nahi.</p></article>
+<article class="story-card"><div class="num">03 / LITTLE THINGS</div><h3>Chhoti si duniya</h3><p>“ese hi”, “ooo”, “Hmm”… kabhi ek emoji, kabhi do lafz. Shayad aapke liye bas normal conversation; kisi aur ke liye din bhar yaad reh jaane wali chhoti si baat.</p></article>
+<article class="story-card"><div class="num">04 / THE DISTANCE</div><h3>Ek taraf ka raasta</h3><p>Har kahaani ka anjaam milna nahi hota. Kabhi kisi ki khushi door se dekhna bhi mohabbat ka ek shaant, samajhdaar roop ho sakta hai. Aapki marzi, aapki space—hamesha pehle.</p></article></div></section>
+<section class="philosophy"><div class="eyebrow">A question for a philosophy teacher</div><div class="question">“Kya har khoobsurat ehsaas ko naam dena zaroori hai, ya kuch ehsaas bina naam ke bhi poore hote hain?”</div><div class="answer">— Ek sawaal, jiska jawaab shayad khamoshi ke paas hai.</div><div class="memories"><span class="memory">🐻</span><span class="memory">🙃</span><span class="memory">🤞</span></div></section>
+<section id="shayari"><div class="section-head"><div class="kicker">Chapter II · Words I couldn't say</div><h2>Ink remembers what lips hide</h2><p>Yeh alfaaz kisi jawab ki umeed mein nahi—bas un ehsaason ki yaad mein hain, jinhe kagaz par jagah mil gayi.</p></div><div class="quote-wrap">
+<article class="poem"><h3>01 · Aankhon ki baatein</h3><p>Chashni bhi feeki pad jaaye, aisi aankhein teri,
+Nazar ko bhi haya aa jaaye, aisi nazrein teri.
+
+Samandar bhi doob jaaye, teri aankhon ke nashe mein,
+Kaajal tere nainon mein, ashq mere nainon mein.</p></article>
+<article class="poem"><h3>02 · Chaand sa roshan</h3><p>चाँद की रोशनी ओढ़ी है क्या तुम्हारी चमक ने,
+कि चाँद भी शरमा जाए तुम्हारी दमक से।
+
+आँखों की चमक से तुम्हारी ऐसा नूर बरसे,
+कि सूरज भी बादलों में छिपने को तरसे।
+
+दीदार तुम्हारा हो जाए, ऐसा आशियाना कहाँ,
+जहाँ कदम पड़ें तुम्हारे, उस ज़मीं में बहार कहाँ नहीं।
+
+रेशम से भी नाज़ुक ये लम्हा, कितना प्यारा,
+किस्मतवाली है वो चीज़, जिसे तुमने अपना माना।</p></article>
+<article class="poem"><h3>03 · Guzarta waqt</h3><p>Guzarta hai mera din, chahat ke deewanon mein,
+Deewangi toh mujhko hai, unki chahat kahin aur hai.
+
+Guzarti hai meri shaam, maikhane ke andheron mein,
+Yeh maikhana mai ka nahi, mere ashkon ka hai.
+
+Guzarti hai meri raat, siskiyon aur sawaalon mein,
+Sawaal mere wajood ke hain, meri aarzoo ke hain.
+
+Guzarta hai mera waqt, unke ehsaason mein,
+Unke khayaalon mein, unse ki gayi baaton mein.
+
+Guzarta hai mera har lamha, jaamon mein, khwaabon ke fasaanon mein,
+Nasha toh kahin bhi nahi, bas woh base hain meri yaadon mein.</p></article>
+<article class="poem"><h3>04 · Tasveer tumhari</h3><p>Tumhe jitna sochta hoon,
+Aankhein utna bhar aati hain,
+Na ro pata hoon, na hans pata hoon,
+Na jee pata hoon, na mar pata hoon.
+
+Jazbaat bayaan nahi kar pata,
+Kisi se kuch keh nahi pata,
+Dil jab bhar aata hai,
+Dekh leta hoon tasveer tumhari.
+
+Kambakht dil ne aadat si bana li,
+Roz wahi tamaasha, wahi kahaani,
+Meri haisiyat nahi ki paa loon tumhe,
+Kismat ko manzoor nahi mil jaaye tu mujhe.
+
+Main toh nadaan tha,
+Teri baaton mein khush tha,
+Teri chhoti si baat mein bhi
+Apni khushiyon ko dhoondhta tha.
+
+Ab na koi shikwa hai, na koi sawaal,
+Bas dil mein daba rakhe hain kuch khayaal,
+Main sambhaal lunga khud ko…
+Bas thoda waqt lagega, har baar.</p></article>
+<article class="poem"><h3>05 · Do pal ki baatein</h3><p>दो पल की बातों से मुस्कुराने लगे हम,
+ख़बर ही न हुई, कब दिल लगाने लगे हम।
+
+बातों-बातों में इश्क़ तो हो रहा है,
+न जाने क्यों उनका दिल भर रहा है।
+
+हम आज भी उनके इंतज़ार में खोए हैं,
+वो बदल रहे हैं, और हम उन्हीं के हुए हैं।</p></article>
+<article class="poem"><h3>06 · Khamoshi</h3><p>Meri khamoshi mein, meri beqaraari…
+Pyaar karun… ya na karun,
+Yaad tumhi ko karta hoon.
+
+Qurbat nahi hai shaamil humse,
+Dildar, tumhari shokhiyon mein rehta hoon.</p></article>
+<article class="poem"><h3>07 · Khwaab</h3><p>Tumhe paa toh nahi sakta hoon,
+Apna khwaab toh bana hi sakta hoon.
+
+Tumhe dekh toh nahi sakta hoon,
+Zehen mein tumhe basa toh sakta hoon.
+
+Tumhe chhoo toh nahi sakta hoon,
+Tumhara ehsaas toh kar hi sakta hoon.
+
+Tumse kuch keh toh nahi sakta hoon,
+Do lafz tumhare naam likh toh sakta hoon.</p></article>
+<article class="poem"><h3>08 · Baadal aur hawayein</h3><p>सिर झुका कर जो तुम बादलों को राहत दे रही हो,
+ज़ुल्फ़ें लहरा कर जो तुम हवाओं को सहारा दे रही हो,
+यूँ ही अदाएँ बिखेर कर जो तुम वादियों को सजा रही हो,
+समझ नहीं आ रहा क्यों तुम मुझे इतना तड़पा रही हो… </p></article>
+<article class="poem"><h3>09 · Dil naadaan</h3><p>दिल की धड़कन बढ़ गई है, जब से आप आए हैं,
+ऐसे सताया न करो, पिया, ये दिल नादान है, पागल है।
+
+साँसों की रफ़्तार बढ़ गई है, जब जब बातें हुई हैं,
+ऐसे इतराया न करो, पिया, ये मन बेचैन है, आवारा है।
+
+माना कि आप अपनी मस्ती में खोए हुए हैं,
+पर मेरी मोहब्बत की कश्ती में हमसफ़र सिर्फ़ आप ही हैं।</p></article>
+<article class="poem"><h3>10 · Ek ishaare ke intezaar mein</h3><p>Baatein banana nahi aati, Kahaniyan bunna nahi aata.
+Jhoothe waade mujhse hote nahi, Aur sach hai jo, woh keh paata nahi.
+
+Par pyaar toh tumhi se karta hoon, Har roz yaad tumhi ko karta hoon,
+Sochte-sochte thak jaata hoon, Phir tumhare khayaalon mein kho jaata hoon.
+
+Main kuch keh paata nahi, Tum bhi kuch kehti nahi,
+Jo bhi hai, achha hai, thoda sa kaccha hai, Kuch ankaaha, kuch anjaana sa.
+
+Bas yun hi muskurate rahte hain, Kuch dil mein, kuch labon pe rakhte hain,
+Kabhi tum bhi padh lena meri khamoshi, Hum toh bas ek ishaare ke intezaar mein rahte hain.</p></article>
+<article class="poem"><h3>11 · Gumnaam aashiq</h3><p>हम तो उनकी मर्ज़ी के मोहताज हैं,
+हमारी उनके यहाँ कोई औकात नहीं।
+
+हम बेशर्मों की तरह हर रोज़ उठ जाते हैं,
+उनका दीदार करने फिर पहुँच जाते हैं।
+
+उनकी नज़रों में हमारी कोई जगह नहीं,
+शायद हमारे नसीब में उनकी मोहब्बत नहीं।
+
+ख़ामख़ाह बातों को बढ़ाए जा रहा हूँ मैं,
+उन्हें मेरी बातों की कोई फ़िक्र नहीं।
+
+उनकी बातें मेरे लिए जन्नत-सी हैं,
+और मैं एक गुमनाम आशिक़,
+जो उनकी यादों में ही कहीं दफ़्न है।</p></article>
+<article class="poem"><h3>12 · Badalte sawaal</h3><p>जवाब के क़रीब थे, तो सवाल बदल गए,
+शायद उनका मन ही न था, इसलिए जज़्बात बदल गए।
+
+हम हक़ीक़त से ज़्यादा तसव्वुर में तकलीफ़ उठाते रह गए,
+हम ख़ामोश क्या हुए, उनके ख़यालात बदल गए…</p></article>
+<article class="poem"><h3>13 · Wahi nazm, ek aur baar</h3><p>सिर झुका कर जो तुम बादलों को राहत दे रही हो,
+ज़ुल्फ़ें लहरा कर जो तुम हवाओं को सहारा दे रही हो,
+यूँ ही अदाएँ बिखेर कर जो तुम वादियों को सजा रही हो,
+समझ नहीं आ रहा क्यों तुम मुझे इतना तड़पा रही हो…</p></article>
+<article class="poem"><h3>14 · Raat ke sawaal</h3><p>कुछ समझ नहीं आ रहा, क्या कर रहा हूँ,
+सोने की कोशिश में, ख़ुद से ही हार रहा हूँ।
+
+जितनी बार बंद करता हूँ आँखें,
+उतनी ही बार ख़यालों में बिखर जाता हूँ।
+
+न नींद नसीब होती है, न सुकून पा रहा हूँ।
+कुछ भी लिख रहा हूँ, अपने आँसू रोकने के लिए,
+दिल को समझाने के लिए, ख़ुद को सँभालने के लिए।
+
+पागल नहीं हूँ मैं, पर ये पागलपन भी मेरा ही है,
+क्या करूँ, ये मन अब मेरे क़ाबू में कहाँ है।
+
+आज कुछ हो गया है मुझे, माफ़ करना,
+अनजाने में कुछ कह दूँ तो माफ़ करना।
+
+रोज़ तुम्हारे पास होने की कोशिश करता हूँ,
+जितना मुमकिन हो, तुम्हारे पास रहता हूँ।
+और जब मिलना मुमकिन नहीं होता,
+तुम्हारी तस्वीर देखकर ही लौट जाता हूँ।</p><div class="translation">Some lines return, just like certain thoughts do.</div></article>
+</div></section>
+<section id="music"><div class="section-head"><div class="kicker">Chapter III · A soundtrack</div><h2>Some songs say it better</h2><p>Choose a song. Let it play only if you wish. Nothing starts without your touch.</p></div>
+<div class="music-box"><div class="music-copy"><div class="eyebrow">The little playlist</div><h3>Between the notes</h3><p>Seven songs, gathered here like little pieces of a feeling. Select any title to load it in the player.</p><p class="smallnote">Playback is provided by YouTube. Availability and ads are controlled by YouTube.</p></div>
+<div class="track-list" id="trackList"></div></div>
+<div class="player"><div id="playerFrame"><div style="aspect-ratio:16/9;display:grid;place-items:center;color:#a995a0;font:italic 20px 'Cormorant Garamond',serif">Choose a song above ♡</div></div><p class="player-note">The embedded YouTube player may show the video as part of YouTube's official playback experience. Press play in the player to listen.</p></div>
+</section>
+<section id="secret"><div class="section-head"><div class="kicker">The last page · A small secret</div><h2>For the one who may never know</h2><p>Ek chhota sa raaz. Isse kholne ke liye bas woh initials likhiye jo is kahaani ke dil mein chhupe hain.</p></div>
+<div class="secret"><div class="lock">✧ ♡ ✧</div><h2>Some letters hold a universe</h2><p>Enter her initials to reveal the message.<br><span style="font-size:12px">Edit the initials in the page code before sharing this page.</span></p>
+<input id="initialInput" maxlength="5" placeholder="HER INITIALS" aria-label="Enter initials"><br><button class="btn" id="unlock">Unlock the note</button><div class="error" id="error"></div>
+<div class="reveal" id="reveal">“I never asked the stars to bring you closer.<br>I only wanted to thank the universe<br>for letting my path cross yours.<br><br>— Some feelings ask for no answer.”<br>I love you ❤️<br></div></div></section>
+<footer><div class="signature">Kuch ankahe lafz… sirf tumhare naam.</div><p>Made with ❤️, Made of words, not expectations. · You are free to feel nothing, and that is okay.</p><p style="margin-top:24px">© An Untold Story</p></footer>
+<script>
+const SECRET_INITIALS = "SJ";
+const songs = [
+ ["A song for the first thought","LV_wiOhO40Q"],
+ ["Somewhere in the lyrics","CEbB9kdu8ng"],
+ ["For a quiet evening","WnU0lH6C0EA"],
+ ["A little pause","q1zbZAR8Zpg"],
+ ["A memory in melody","V8zXLMIjlcw"],
+ ["When words fall short","tFNWHLEIiJ0"],
+ ["One last song tonight","qLSXgrBsXs0"]
+ 
+];
+const list=document.getElementById('trackList');
+songs.forEach((s,i)=>{const b=document.createElement('button');b.className='track';b.innerHTML=`<span class="play">▶</span><span style="flex:1">${String(i+1).padStart(2,'0')} &nbsp; ${s[0]}</span><span>YouTube ↗</span>`;b.addEventListener('click',()=>{document.querySelectorAll('.track').forEach(x=>x.classList.remove('active'));b.classList.add('active');document.getElementById('playerFrame').innerHTML=`<iframe title="${s[0]}" src="https://www.youtube-nocookie.com/embed/${s[1]}?rel=0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>`;});list.appendChild(b)});
+document.getElementById('unlock').addEventListener('click',()=>{const val=document.getElementById('initialInput').value.trim().replace(/\s+/g,'').toUpperCase();const err=document.getElementById('error');if(val===SECRET_INITIALS.toUpperCase()){document.getElementById('reveal').classList.add('show');err.textContent='';}else{err.textContent='Not quite. Try the initials again.';document.getElementById('reveal').classList.remove('show')}});
+document.getElementById('initialInput').addEventListener('keydown',e=>{if(e.key==='Enter')document.getElementById('unlock').click()});
+const particleBox=document.getElementById('particles');const symbols=['♡','✦','✧','❀'];for(let i=0;i<24;i++){const el=document.createElement('span');el.className='particle';el.textContent=symbols[i%symbols.length];el.style.left=Math.random()*100+'%';el.style.animationDuration=(13+Math.random()*18)+'s';el.style.animationDelay=(-Math.random()*25)+'s';el.style.fontSize=(10+Math.random()*18)+'px';particleBox.appendChild(el)}
+</script>
+</body></html>
